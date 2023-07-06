@@ -1,0 +1,14 @@
+[Unit]
+Description=script_for_currencies
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=always
+RestartSec=1200s
+ExecStart=/usr/bin/python3 /home/script_for_currencies.py
+
+[Install]
+WantedBy=multi-user.target
